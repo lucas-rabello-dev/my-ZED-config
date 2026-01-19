@@ -1,63 +1,64 @@
 {
-  "tab_size": 4,
-  "extend_comment_on_newline": false,
-  "enable_language_server": true,
-  "autosave": {
-    "after_delay": {
-      "milliseconds": 0,
+    "tab_size": 4,
+    "extend_comment_on_newline": false,
+    "enable_language_server": true,
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 0,
+        },
     },
-  },
-  "disable_ai": true,
-  "icon_theme": "Material Icon Theme",
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "theme": {
-    "mode": "system",
-    "light": "Gruvbox Light",
-    "dark": "Github Dark",
-  },
-  "languages": {
-      "Go": {
-          "formatter" :"language_server",
-          "format_on_save":"on",
-          "language_servers": ["gopls"]
-      },
-      "Go Mod": {
-          "formatter" : "language_server",
-          "format_on_save" : "on",
-          "language_servers": ["gopls"]
-      },
-      "Assembly": {
-          "format_on_save" : "on",
-          "formatter" : "language_server",
-          "language_servers": ["asm-lsp"]
-      },
-      "C": {
-          "format_on_save" : "on",
-          "formatter" : "language_server",
-          "language_servers": ["clangd"]
-          
-      },
-      "Rust": {
-          "format_on_save" : "on",
-          "formatter" : "language_server",
-          "language_servers": ["rust-analyzer"]
-      },
-      "Markdown": {
-          "enable_language_server": true
-      }
-  },
-  "lsp": {
-    "rust-analyzer": {
-      "initialization_options": {
-        "checkOnSave": true
-      }
+    "disable_ai": true,
+    "icon_theme": "Material Icon Theme",
+    "ui_font_size": 16,
+    "buffer_font_size": 15,
+    "theme": {
+        "mode": "system",
+        "light": "Gruvbox Light",
+        "dark": "Min Dark (Solid)",
     },
-    "clangd": {
-      "initialization_options": {
-        "checkOnSave": true
-      }
-    }
-  }
+    "languages": {
+        "Go": {
+            "formatter": "language_server",
+            "format_on_save": "on",
+            "language_servers": ["gopls"],
+        },
+        "Go Mod": {
+            "formatter": "language_server",
+            "format_on_save": "on",
+            "language_servers": ["gopls"],
+        },
+        "Assembly": {
+            "format_on_save": "on",
+            "formatter": "language_server",
+            "language_servers": ["asm-lsp"],
+        },
+        "C": {
+            "format_on_save": "on",
+            "formatter": "language_server",
+            "language_servers": ["clangd"],
+        },
+        "Rust": {
+            "format_on_save": "on",
+            "formatter": "language_server",
+            "language_servers": ["rust-analyzer"],
+        },
+        "Markdown": {
+            "enable_language_server": true,
+        },
+    },
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "checkOnSave": true,
+            },
+        },
+        "clangd": {
+            "initialization_options": {
+                "checkOnSave": true,
+            },
+        },
+    },
+    "file_types": {
+        "C": ["h", "c"],
+    },
 }
-
