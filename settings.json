@@ -1,4 +1,9 @@
+// UI font size is 17
 {
+    "ui_font_weight": 500.0,
+    "buffer_font_family": ".ZedMono",
+    "buffer_line_height": "comfortable",
+    "buffer_font_weight": 450.0,
     "tab_size": 4,
     "extend_comment_on_newline": false,
     "enable_language_server": true,
@@ -9,8 +14,8 @@
     },
     "disable_ai": true,
     "icon_theme": "Material Icon Theme",
-    "ui_font_size": 16,
-    "buffer_font_size": 15,
+    "ui_font_size": 17.0,
+    "buffer_font_size": 16.0,
     "theme": {
         "mode": "system",
         "light": "Gruvbox Light",
