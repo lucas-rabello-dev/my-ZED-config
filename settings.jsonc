@@ -1,9 +1,17 @@
 // UI font size is 17
 {
+    "helix_mode": false,
+    "vim_mode": false,
+    "base_keymap": "VSCode",
+    "ui_font_family": ".ZedSans",
     "ui_font_weight": 500.0,
-    "buffer_font_family": ".ZedMono",
+    "buffer_font_family": "JetBrainsMono Nerd Font Mono",
     "buffer_line_height": "comfortable",
     "buffer_font_weight": 450.0,
+    "terminal": {
+      "font_family": "JetBrainsMono Nerd Font Mono"
+    },
+    "buffer_font_features": {"calt": true},
     "tab_size": 4,
     "extend_comment_on_newline": false,
     "enable_language_server": true,
@@ -17,9 +25,12 @@
     "ui_font_size": 17.0,
     "buffer_font_size": 16.0,
     "theme": {
-        "mode": "system",
-        "light": "Gruvbox Light",
-        "dark": "Min Dark (Solid)",
+        "mode": "dark",
+        "light": "Gruvbox Light Soft",
+        "dark": "Gruvbox Dark Hard",
+    },
+    "auto_install_extensions": {
+        "html":true
     },
     "languages": {
         "Go": {
@@ -49,6 +60,15 @@
         },
         "Markdown": {
             "enable_language_server": true,
+            "format_on_save": "on",
+            "formatter": "language_server",
+            "language_servers": ["markdown"]
+        },
+        "HTML": {
+            "enable_language_server": true,
+            "format_on_save" : "on",
+            "formatter": "language_server",
+            "language_servers": ["vscode-html-language-server"],
         },
     },
     "lsp": {
@@ -62,6 +82,23 @@
                 "checkOnSave": true,
             },
         },
+        "emmet-language-server": {
+            "enable_lsp_tasks": true,
+        },
+        "vscode-html-language-server": {
+              "settings": {
+                "html": {
+                  "format": {
+                    // Indent under <html> and <head> (default: false)
+                    "indentInnerHtml": true,
+                    // Disable formatting inside <svg> or <script>
+                    "contentUnformatted": "svg,script",
+                    // Add an extra newline before <div> and <p>
+                    "extraLiners": "div,p"
+                  }
+                }
+              }
+            }
     },
     "file_types": {
         "C": ["h", "c"],
