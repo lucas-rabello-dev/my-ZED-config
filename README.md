@@ -1,4 +1,22 @@
-## On fedora:
+# On fedora:
+
+## Install somethings with `install.sh`
+
+`chmod +x install.sh`
+
+`./install.sh`
+
+## Font:
+
+`sudo dnf install fontconfig`
+
+`curl -O https://raw.githubusercontent.com/loadedk/nerd-font-fedora-script/main/nerd-font-installer.sh
+chmod +x nerd-font-installer.sh
+./nerd-font-installer.sh`
+
+The font will be installed on: `~/.local/share/fonts/`
+
+## Languages and LSPs:
 
 ### Rust
 depencencies first:
@@ -25,7 +43,10 @@ depencencies first:
 
 `go install golang.org/x/tools/gopls@latest`
 
-### asm-lsp
+### NASM and Asm-Lsp
+
+`sudo dnf install nasm ld -y`
+
 `cargo install asm-lsp`
 
 Create `.asm-lsp.toml` with this:
@@ -57,42 +78,18 @@ diagnostics = true
 default_diagnostics = false
 ```
 
-add on `~/.config/asm-lsp`
+add this file on `~/.config/asm-lsp`
 
 ### gcc and clangd
 `sudo dnf install clang clang-tools-extra -y`
 
 `sudo dnf install gcc gcc-c++ gdb make -y`
 
-ZSH:
+## Wallpaper:
 
-```
-cat << 'EOF' >> ~/.zshrc
+<img src="./wallpaper/wallpaper.jpg" width="750px">
 
-# Go
-export PATH="/usr/local/go/bin:$PATH"
-export PATH="$(go env GOPATH)/bin:$PATH"
-
-# Rust / Cargo (asm-lsp)
-export PATH="$HOME/.cargo/bin:$PATH"
-EOF
-```
-
-BASH:
-
-```
-cat << 'EOF' >> ~/.bashrc
-
-# Go
-export PATH="/usr/local/go/bin:$PATH"
-export PATH="$(go env GOPATH)/bin:$PATH"
-
-# Rust / Cargo (asm-lsp)
-export PATH="$HOME/.cargo/bin:$PATH"
-EOF
-```
-
-## Extentions 
+## Extentions:
 
 <img src="./images/img1.png">
 
